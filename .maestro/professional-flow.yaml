@@ -1,0 +1,22 @@
+appId: com.turno.app
+name: Gestionar agenda profesional
+tags:
+  - smoke
+  - professional
+  - gherkin
+properties:
+  bddFeature: "Agendamiento y gestión de citas"
+  bddScenario: "Gestionar la agenda diaria como profesional"
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: "nav-professional"
+- assertVisible: "Agenda profesional"
+- assertVisible:
+    id: "professional-today-count"
+- tapOn:
+    id: "professional-complete-1"
+- assertVisible:
+    id: "completed-1"
+- takeScreenshot: "agenda-profesional"

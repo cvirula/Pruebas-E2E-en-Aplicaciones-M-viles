@@ -1,0 +1,19 @@
+appId: com.turno.app
+name: Mostrar agenda vacía
+tags:
+  - smoke
+  - gherkin
+properties:
+  bddFeature: "Agendamiento y gestión de citas"
+  bddScenario: "Consultar la agenda cuando no existen citas"
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: "nav-appointments"
+- assertVisible:
+    id: "empty-appointments"
+- assertVisible: "Aún no tienes citas"
+- assertVisible:
+    id: "empty-book"
+- takeScreenshot: "agenda-vacia"

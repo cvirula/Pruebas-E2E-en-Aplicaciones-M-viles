@@ -1,0 +1,51 @@
+appId: com.turno.app
+name: Reservar y gestionar una cita
+tags:
+  - smoke
+  - booking
+  - gherkin
+properties:
+  bddFeature: "Agendamiento y gestión de citas"
+  bddScenario: "Reservar y cancelar una cita correctamente"
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Tu tiempo, bien cuidado."
+- tapOn:
+    id: "book-primary"
+- assertVisible: "¿Qué necesitas?"
+- tapOn:
+    id: "service-consulta"
+- tapOn:
+    id: "booking-next"
+- assertVisible: "Elige a tu especialista"
+- tapOn:
+    id: "professional-sofia"
+- tapOn:
+    id: "booking-next"
+- assertVisible: "¿Cuándo te queda bien?"
+- tapOn:
+    id: "date-2"
+- tapOn:
+    id: "time-1030"
+- tapOn:
+    id: "booking-next"
+- assertVisible: "Revisa tu cita"
+- assertVisible: "Sofía Herrera"
+- assertVisible: "10:30"
+- tapOn:
+    id: "confirm-booking"
+- assertVisible:
+    id: "booking-success-title"
+- assertVisible: "¡Tu cita está lista!"
+- tapOn:
+    id: "view-appointment"
+- assertVisible:
+    id: "appointment-card"
+- assertVisible: "Consulta general"
+- tapOn:
+    id: "cancel-appointment"
+- assertVisible:
+    id: "cancelled-appointment"
+- assertVisible: "Cita cancelada"
+- takeScreenshot: "reserva-cancelada"

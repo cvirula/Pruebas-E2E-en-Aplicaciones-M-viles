@@ -1,0 +1,5 @@
+{
+  "Reservar y cancelar una cita correctamente": "booking-flow.yaml",
+  "Consultar la agenda cuando no existen citas": "empty-state.yaml",
+  "Gestionar la agenda diaria como profesional": "professional-flow.yaml"
+}
