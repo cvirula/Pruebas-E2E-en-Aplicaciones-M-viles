@@ -77,6 +77,7 @@ El flujo `empty-state.yaml` verifica la agenda vacía desde una instalación lim
 - `scripts/validate-bdd.mjs`: contrato automático entre Gherkin y Maestro.
 - `docs/escenarios-pruebas.html`: escenarios BDD con capturas producidas por Maestro.
 - `docs/documentacion-tecnica.html`: resumen técnico, diagramas, flujos y patrones.
+- `docs/maestro-dev-ejecucion.mp4`: video de evidencia del escenario automatizado de reserva y cancelación.
 
 ## Comprobaciones de desarrollo
 
